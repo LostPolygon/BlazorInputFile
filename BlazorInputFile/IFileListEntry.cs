@@ -3,7 +3,7 @@ using System.IO;
 
 namespace BlazorInputFile
 {
-    public interface IFileListEntry
+    public interface IFileListEntry : IDisposable
     {
         DateTime LastModified { get; }
 
