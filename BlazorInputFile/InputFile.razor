@@ -41,6 +41,10 @@
         return OnChange.InvokeAsync(files);
     }
 
+    public async Task Reset() {
+        await JSRuntime.InvokeAsync<object>("BlazorInputFile.reset", InputFileElement, _thisReference);
+    }
+
     protected override async Task OnAfterRenderAsync(bool firstRender) {
         if (firstRender) {
             _thisReference = DotNetObjectReference.Create(this);

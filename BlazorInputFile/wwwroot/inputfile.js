@@ -28,6 +28,10 @@
             });
         },
 
+        reset: function init(elem, componentInstance) {
+            elem.value = null;
+        },
+
         startRemoteUpload: function startRemoteUpload(elem, fileId, endpoint) {
             var file = elem._blazorFilesById[fileId];
 
