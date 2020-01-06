@@ -80,12 +80,7 @@ namespace BlazorInputFile {
                 await fileUploadHandler.Handler(null);
                 return;
             }
-            /*FileMultipartSection fileSection = new FileMultipartSection(section, contentDisposition);
 
-            string name = fileSection.Name;
-            string fileName = fileSection.FileName;
-
-            long baseStreamOffset = section.BaseStreamOffset.GetValueOrDefault(0);*/
             await fileUploadHandler.Handler(section.Body);
         }
 

@@ -18,7 +18,7 @@
     [Parameter]
     public EventCallback<IFileListEntry[]> OnChange { get; set; }
 
-    internal ElementReference InputFileElement { get; set; }
+    public ElementReference InputFileElement { get; internal set; }
     private IDisposable _thisReference;
     private FileListEntryImpl[] _lastKnownFiles = new FileListEntryImpl[0];
 

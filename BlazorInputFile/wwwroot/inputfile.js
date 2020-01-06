@@ -30,6 +30,8 @@
 
         reset: function init(elem, componentInstance) {
             elem.value = null;
+            var changeEvent = new Event('change');
+            elem.dispatchEvent(changeEvent);
         },
 
         startRemoteUpload: function startRemoteUpload(elem, fileId, endpoint) {
